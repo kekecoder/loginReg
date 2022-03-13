@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+ ini_set('display_errors', 1);
 if (isset($_SESSION['id'])) {
     header('Location: index.php');
 }

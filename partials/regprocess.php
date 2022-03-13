@@ -1,5 +1,6 @@
 <?php
-date_default_timezone_set('Africa/Lagos');
+
+ini_set('display_errors', 1);
 require_once "input-func.php";
 $errors = [];
 $errorMsg = [];
@@ -39,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     $query->execute();
 
 
-                    $_SESSION['id'] = $id;
+                    //$_SESSION['id'] = $id;
 
                     header("Location: ../index.php");
                 }
