@@ -11,7 +11,7 @@ try {
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   
       //print "connected successfully";
-      $sql = "CREATE TABLE users (
+      /*$sql = "CREATE TABLE users (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     firstname VARCHAR(255) NOT NULL,
     lastname VARCHAR(255) NOT NULL,
@@ -21,7 +21,7 @@ try {
     ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci";
         //$sql = "DROP TABLE users";
     $pdo->exec($sql);
-    print "table deleted successfully";
+    print "table created successfully";*/
   } catch (PDOException $e) {
       //print "An Exception has occured " . $e->getMessage();
       print "Something went wrong, please try again later.";
