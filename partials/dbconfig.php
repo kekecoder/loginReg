@@ -17,11 +17,12 @@ try {
     lastname VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     password VARCHAR(255),
-    created_at DATETIME
-    ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci";
+    created_date DATETIME
+    ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci";*/
+        $sql = "DROP TABLE users";
     $pdo->exec($sql);
-    print "table created successfully";*/
-  } catch (Error $e) {
+    print "table deleted successfully";
+  } catch (PDOException $e) {
       //print "An Exception has occured " . $e->getMessage();
       print "Something went wrong, please try again later.";
   }
