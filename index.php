@@ -6,23 +6,26 @@ if (!isset($_SESSION['id'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/logreg.css">
-  <title>Basic Login and Registration</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/logreg.css">
+    <title>Basic Login and Registration</title>
 </head>
+
 <body>
-  <?php
+    <?php
 require_once __DIR__ . '/partials/nav.php';
 ?>
-<div class="container">
-  <?php if (isset($_SESSION['id'])) {
-    echo $_SESSION['firstname'] . $_SESSION['lastname'];
+    <div class="container">
+        <?php if (isset($_SESSION['id'])) {
+    echo ucfirst($_SESSION['firstname']) .' ' . ucfirst($_SESSION['lastname']) . " you are welcome onborad, you can logout now, thanks!";
 }?>
-</div>
-<?php require_once 'partials/js.php'; ?>
+    </div>
+    <?php require_once 'partials/js.php'; ?>
 </body>
+
 </html>

@@ -1,6 +1,6 @@
 <?php
 
-ini_set('display_errors', 1);
+date_default_timezone_set('Africa/Lagos');
 require_once "input-func.php";
 $errors = [];
 $errorMsg = [];
