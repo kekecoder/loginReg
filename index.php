@@ -20,9 +20,9 @@ if (!isset($_SESSION['id'])) {
     <?php
 require_once __DIR__ . '/partials/nav.php';
 ?>
-    <div class="container">
+    <div class="container mt-3">
         <?php if (isset($_SESSION['id'])) {
-    echo ucfirst($_SESSION['firstname']) .' ' . ucfirst($_SESSION['lastname']) . " you are welcome onborad, you can logout now, thanks!";
+    echo '<span class="text-success"'. ucfirst($_SESSION['firstname']) .' ' . ucfirst($_SESSION['lastname']) .'</span>'. " you are welcome onborad, you can logout now, thanks!";
 }?>
     </div>
     <?php require_once 'partials/js.php'; ?>
